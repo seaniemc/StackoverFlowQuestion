@@ -1,0 +1,134 @@
+
+<div class="container">
+
+    <div class="row main"  ng-controller="UserController">
+        <div class="main-login main-center">
+        <h5>Sign up once for instant access.</h5>
+            <form name="userForm" ng-submit="createUser()"
+				novalidate="novalidate"
+			    ng-hide="submitted" >
+
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" 
+                                class="form-control" 
+                                ng-model="formModel.name"
+                                id="name"  
+                                placeholder="Enter your Name"
+                                required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="email" 
+                                class="form-control" 
+                                ng-model="formModel.email"
+                                id="email"  
+                                placeholder="Enter your Email"
+                                required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Username</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" 
+                                class="form-control" 
+                                ng-model="formModel.username"
+                                id="username"  
+                                placeholder="Enter your Username"
+                                required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
+                            <input type="password" 
+                                class="form-control" 
+                                ng-model="formModel.password" 
+                                id="password"  
+                                placeholder="Enter your Password"
+                                required="required" />
+                        </div>
+                    </div>
+                </div>
+
+      <!--
+                    <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" 
+                            class="form-control" 
+                            name="confirm" 
+                            id="confirm"  
+                            placeholder="Confirm your Password"
+                            required="required" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label for="gender" class="cols-sm-2 control-label">Sex</label >
+                    <div class="cols-sm-10">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="false"></i></span>
+                        <select id="gender"
+                                        class="form-control"
+                                        ng-model="formModel.sex"
+                                        required="required" >
+                            <option value="" >Please Choose</option >
+                            <option value="male" >Male</option >
+                            <option value="female" >Female</option >
+                        </select >
+                    </div>
+                </div >-->
+                <div class="form-group" >
+                    <label for="type" class="cols-sm-2 control-label">User Type</label >
+                    <div class="cols-sm-10">
+                        <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                        <select id="type"
+                                        class="form-control"
+                                        ng-model="formModel.type"
+                                        required="required" >
+                            <option value="" >Please Choose</option >
+                            <option value="ROLE_ADMIN" >Lecturer</option >
+                            <option value="ROLE_USER" >Student</option >
+                        </select >
+                    </div>
+                </div >
+                <div>
+                    <button class="btn btn-primary"
+                            ladda="submitting"
+                            data-style="expand-right"
+                                type="submit">
+                        <span ng-show="submitting">Registering</span>
+                        <span ng-show="!submitting">Register</span>
+			        </button>
+                </div>
+                <!--<div class="form-group ">
+                    <a  target="_blank" type="button" 
+                    id="button" 
+                    class="btn btn-primary btn-lg btn-block login-button"
+                    ladda="submitting"
+                    data-style="expand-right"
+                    >Register</a>
+                </div>-->
+                
+            </form>
+        </div>
+    </div>
+</div>
